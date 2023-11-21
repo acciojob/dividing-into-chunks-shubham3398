@@ -8,7 +8,13 @@ const divide = (arr, n) => {
 	while (e < arr.length) {
 		sum += arr[e];
 
-		if(sum > n){
+		if(sum === n){
+			let subarr = arr.slice(s, e+1);
+			ans.push(subarr);
+			s = e+1;
+			sum = 0;
+		}
+		else if(sum > n){
 			let subarr = arr.slice(s, e);
 			ans.push(subarr);
 			s = e;
