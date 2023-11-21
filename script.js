@@ -14,7 +14,7 @@ const divide = (arr, n) => {
 			s = e;
 			sum = arr[e];
 		}
-		if(sum < n && e === arr.length - 1)
+		if(sum <= n && e === arr.length - 1)
 		{
 			let subarr = arr.slice(s, e+1);
 			ans.push(subarr);	
